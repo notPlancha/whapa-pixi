@@ -1,0 +1,28 @@
+[project]
+name = "whapa"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["notPlancha <andre.plancha@hotmail.com>"]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tasks]
+gui = 'python .\whapa-gui.py'
+
+[dependencies]
+python = "3.8.*"
+requests = ">=2.32.3,<2.33"
+pandas = ">=2.0.3,<2.1"
+colorama = ">=0.4.6,<0.5"
+numpy = ">=1.24.4,<1.25"
+selenium = ">=4.21.0,<4.22"
+packaging = ">=24.0,<25"
+webdriver-manager = ">=4.0.1,<4.1"
+pycryptodome = ">=3.20.0,<3.21"
+configobj = ">=5.0.8,<5.1"
+urllib3 = "<2.0"
+
+[pypi-dependencies]
+pyicloud = "*"
+selenium-stealth = "*"
+gpsoauth = { git = "https://github.com/simon-weber/gpsoauth", rev = "b22c57a" }
