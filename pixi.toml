@@ -8,6 +8,7 @@ platforms = ["win-64"]
 
 [tasks]
 gui = 'python .\whapa-gui.py'
+certifi = "python -m certifi"
 
 [dependencies]
 python = "3.8.*"
@@ -21,6 +22,7 @@ webdriver-manager = ">=4.0.1,<4.1"
 pycryptodome = ">=3.20.0,<3.21"
 configobj = ">=5.0.8,<5.1"
 urllib3 = "<2.0"
+certifi = ">=2024.2.2,<2024.3"
 
 [pypi-dependencies]
 pyicloud = "*"

@@ -9,6 +9,7 @@ from typing import Any, Iterable
 import requests
 from urllib3.poolmanager import PoolManager  # type: ignore
 from urllib3.util import ssl_
+import certifi
 
 from . import google
 
@@ -78,7 +79,7 @@ def _perform_auth_request(
         session.proxies = proxies
     session.headers={"User-Agent": USER_AGENT, 'Content-type': 'application/x-www-form-urlencoded'}
 
-    res = session.post(AUTH_URL, data=data, verify=True)
+    res = session.post(AUTH_URL, data=data, verify=certifi.where())
 
     return google.parse_auth_response(res.text)
 
